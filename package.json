@@ -1,0 +1,37 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "Cypress Project Details",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "RunTest": "npm run test --",
+    "Cypress_API_Demo": "npm run test -- --spec \"cypress/integration/examples/Cypress_API_Demo/**/*.js\"",
+    "Cypress_UI_Demo": "npm run test -- --spec \"cypress/integration/examples/Cypress_UI_Demo/**/*.js\"",
+    "Cypress_API_Demo_Dashboard": "npm run test -- --record --key 3662efed-bb3d-4404-95d3-216edcdeae4a --spec \"cypress/integration/examples/Cypress_API_Demo/**/*.js\"",
+    "Cypress_Sanity": "npm run test -- --record --key 684b4c55-bac8-4a4a-9eba-48d6fb31302e --spec \"cypress/integration/examples/Sanity_Test/**/*.js\""
+  },
+  "author": "Abhinay Dixit",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.0.0",
+    "cypress-cucumber-preprocessor": "4.1.4",
+    "cypress-file-upload": "5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-localstorage-commands": "^1.4.5",
+    "cypress-wait-until": "^1.7.1",
+    "cypress-xpath": "^1.6.2",
+    "eslint-plugin-cypress": "^2.11.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "node-xlsx": "^0.16.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.5.0",
+    "xlsx": "^0.17.0"
+  }
+}

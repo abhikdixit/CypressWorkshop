@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-09T06:57:42.379Z",
+    "end": "2020-10-09T06:57:43.869Z",
+    "duration": 1490,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77f38d3f-4585-4a76-a971-89aa381cdd9a",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Cypress_API_Demo\\Verify_UPDATE(PUT)_Operation.js",
+      "file": "cypress\\integration\\examples\\Cypress_API_Demo\\Verify_UPDATE(PUT)_Operation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0457d0e7-62f1-44d2-b23c-4762ec1c4622",
+          "title": "PUT- Service Example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "PUT - an Employee records",
+              "fullTitle": "PUT- Service Example PUT - an Employee records",
+              "timedOut": null,
+              "duration": 1212,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var item = {\n  \"name\": \"Kumar\"\n};\ncy.request('PUT', '/users/2', item).then(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.body).to.not.be[\"null\"];\n  expect(response.body).to.include({\n    name: 'Kumar'\n  });\n});",
+              "err": {},
+              "uuid": "a9934231-7586-4a2d-a3bd-c3d6fdbe16bb",
+              "parentUUID": "0457d0e7-62f1-44d2-b23c-4762ec1c4622",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9934231-7586-4a2d-a3bd-c3d6fdbe16bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+   "video": true,
+  "Screenshotsfolder": "cypress/videos",
+
+  "projectId": "9gwf8y",
+  "env": 
+  {
+    "api_identity_url": "https://demo.spreecommerce.org/spree_oauth/token",
+    "url": "https://opensource-demo.orangehrmlive.com/index.php/auth/login"
+  }
+ 
+}

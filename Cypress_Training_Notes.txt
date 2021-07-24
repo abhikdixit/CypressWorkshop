@@ -1,0 +1,124 @@
+		Qaulity Engineering  ( SDET)
+
+   "retries":{
+    "runMode": 1,
+    "openMode": 2
+
+,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+      "reportDir": "cypress/report/mochawesome-report",
+      "overwrite": false,
+      "html": true,
+      "json": true,
+      "timestamp": "mmddyyyy_HHMMss"
+   },
+   "screenshotsFolder": "cypress/report/mochawesome-report/assets"
+
+10 Days Plan : Quality Enginnering Training (Open Source)
+
+1. Cypress (End to End Automation tool using JavaScript) : 3 Day
+
+2. Appium ( Mobile app automation tool) : 3 Days
+
+3. Jmeter ( Performance Testing) : 2 Days
+
+4. BDD ( Behaviour Driven Development) using Cucumber  : 1 Day
+
+5. TDD ( Test Driven Development) using Junit Framework : 1 Day
+
+----------------------------------------------
+
+1. Brand Value ( Quality Play important role)
+2. Customer Satisfaction
+------------------------------------------------
+Quality Eng.
+
+1.Functional Testing ( Window Based, Web Based and Mobile based app)
+2.Performance Testing (Window Based, Web Based and Mobile based app)
+3.Mobile app : ( functional, Performance)
+4.API Testing : 
+
+-------------------------------------------
+Disavantage of Tools :  =if you don't know the expected result, you can't automate
+--------------------------------------------
+
+Open Source/ Licence Based Tool
+
+1. Functional Testing : Cypress Open Source, Selenium ( Web Based App), UFT
+2. Performance Testing : Jmeter(OS), LoadRunner (LB)
+3. Mobile app Testing: Appium(top of the selenium and its Java based) - iOS, And
+4. API Testing : Request and Reponse( Functional/Performance Testing)- Cyprees, Selenium, POSTMAN, SoapUI
+
+--------------------------------------------------
+
+Identification of Object/Element using locator (name,id,xpath(Selenium),CSS Selector(), Tag, ClassName, LinkText, PartialLinkText)
+
+Cypress : Only support CSS Selector()
+
+------------------------------------------------------
+tagname[propertyname='propertyvalue']
+
+Assertion : Verification( using this we can compare the actual value with expected value)
+
+----------------------------
+between 5 to 10
+
+admin123
+-------------------
+
+Get and Find in Cypress
+
+--------------------
+
+CI/CD - Jenkins
+
+----------------
+
+Frame/iframe/frameset : this is used for masking the object or element
+
+7th Oct- 2020
+
+1. Frame : Done
+2. Each command : Done
+3. Mouse over :---Done
+4. Alert : Done
+5. Promise concept : Done
+6. Get WebTable
+7. Hooks : Done
+8. Child Window: Done
+9. Child Tab : Done
+10. Executing Scripts from Specific folder : Through Command Line : Done
+11. UI Command (Right Click, Double Click: Done
+12. Navigation Command : Done
+
+8th October - 2020
+
+------------------------------------------------
+Devlopement Stack : Java Stack , JS, Python, MI/ML, Data Science
+
+QE : Testing
+
+BA : Business Analyst :
+
+--------------------------------------------
+
+SDLC Process: DevOps (Dev-Testing-Operation): Agile (DevOps) : BDD, TDD
+
+Requirement : BA
+Design ( HLD/LLD) : BA/Dev(Architect)
+Req/Design Analysis : BA, Dev and QE
+Development: Dev
+Testing: QE : Testing
+Maintenace: BA/Dev/Testing
+----------------------------------------
+Data Driven Concept
+
+Parametrization : Using this user can replace hard coded data with dynamic data.
+
+--------------------------------------------
+
+Smoke:
+Sanity Testing : to do the Build Verification ()
+Regression : End to End ()
+Functional Testing/ Performance

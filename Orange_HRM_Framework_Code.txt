@@ -1,0 +1,265 @@
+//Author : Dixit
+
+class LoginPage
+
+{
+    LaunchURL(url)
+    {
+        cy.visit(url)
+        return this
+    }
+
+    EnterUserName(uname)
+    {
+        const username=cy.get('input#txtUsername')
+        username.clear()
+        username.type(uname)
+        return this
+    }
+
+    EnterPassword(upass)
+    {
+        const pass=cy.get('input#txtPassword')
+        pass.clear()
+        pass.type(upass)
+        return this
+    }
+
+    ClickLoginButton()
+    {
+        const LButton=cy.get('input#btnLogin')
+        LButton.click()
+        return this
+    }
+
+    CaptureErrorMessage()
+    {
+        const ErrMsg=cy.get('#spanMessage')
+        ErrMsg.contains('Invalid credentials')
+        return this
+    }
+
+}
+export default LoginPage
+
+
+-----------------------------------Login Spec.js---------------
+
+// type definitions for Cypress object "cy"
+/// <reference types="cypress" />
+
+import LoginPage from "../../PageObjects_OrangeHRM/LoginPage";
+
+describe('OrangeHRM Login Test', function() {
+    it('Visits the OrangeHRM Page and Perform Login Action', function() {
+        const PLogin=new LoginPage()
+    //Visit the OrnageHRM Website
+    PLogin.LaunchURL("https://opensource-demo.orangehrmlive.com/");
+       // Enter UserName and Password
+    PLogin.EnterUserName('Admin')
+    PLogin.EnterPassword('admin123')
+    PLogin.ClickLoginButton()
+    //Verify that user can see OrangeHRM title
+    cy.title().should('be.equal','OrangeHRM')
+   
+  })
+  })
+
+ : Sowmya---------------------------------------------
+
+Home_Page.js
+-----
+---------
+
+Admin : Simran------------------------------------------------------------
+
+Admin_User_Page.js
+class Admin_User_Page
+{
+    EnterUserName(uname)
+    {
+        const username=cy.get('#searchSystemUser_userName')
+        username.clear()
+        username.type(uname)
+        return this
+    }
+
+    EnterUserRole(utype)
+    {
+        const usertype=cy.get('#searchSystemUser_userType')
+        usertype.clear()
+        usertype.select(utype)
+        return this
+    }
+
+    EnterEmployeeName(ename)
+    {
+        const empname=cy.get('#searchSystemUser_employeeName_empName')
+        empname.clear()
+        empname.type(ename)
+        return this
+    }
+
+    EnterStatus(s)
+    {
+        const st=cy.get('#searchSystemUser_status')
+        st.clear()
+        st.select(s)
+        return this
+    }
+
+    ClickSearchButton()
+    {
+        const sButton=cy.get('#searchBtn')
+        sButton.click()
+        return this
+    }
+
+    ClickResetButton()
+    {
+        const rButton=cy.get('#resetBtn')
+        rButton.click()
+        return this
+    }
+
+}
+
+export default Admin_User_Page
+
+
+Admin_User_AddUser_Page.js
+
+--
+
+My Leave: Akshith
+class MyLeave
+{
+    SearchParam_CheckUncheck(param){
+        switch (param.toUpperCase()){
+            case "ALL":
+                cy.get('#leaveList_chkSearchFilter_checkboxgroup_allcheck').click()
+                break;
+            case "REJECTED":
+                cy.get('#leaveList_chkSearchFilter_-1').click()
+                break;
+            case "CANCELLED":
+                cy.get('#leaveList_chkSearchFilter_0').click()
+                break;
+            case "PENDING APPROVAL":
+                cy.get('#leaveList_chkSearchFilter_1').click()
+                break;
+            case "SCHEDULED":
+                cy.get('#leaveList_chkSearchFilter_2').click()
+                break;
+            case "TAKEN":
+                cy.get('#leaveList_chkSearchFilter_3').click()
+                break;
+        }
+    }
+    ClickSearch(){
+        cy.get('#btnSearch').click();
+    }
+    ClickReset(){
+        cy.get('#btnReset').click();
+    }
+    WriteFromDate(date){
+        const fromdate=cy.get('#calFromDate')
+        fromdate.clear()
+        fromdate.type(date)
+    }
+
+    WriteToDate(date){
+        const todate=cy.get('#calToDate')
+        todate.clear({force: true})
+        todate.type(date)
+    }
+}
+export default MyLeave
+
+
+
+Apply_Leave:Shashank------------------------------
+
+Add_Employee: Pranjal-----------------------------------------------------
+
+Buzz: Abhilash -------------------------------
+
+Directory :  RAMESH 
+Employee list : Nidhi
+
+Buzz :Apeksha-----------------
+export class Buzz
+{
+    ClickUpadte(){
+        const clickupdate=cy.get('#status-tab-label')
+        clickupdate.click()
+        return this
+    }
+   Updatestatus(comment) 
+   {
+     const content=cy.get('#createPost_content')
+     content.type(comment)
+     return this
+   }
+   ClickPost()
+   {
+       const cbutton=cy.get('#postSubmitBtn')
+       cbutton.click()
+       return this
+   }
+   clickImage(){
+    const clickimage=cy.get('#images-tab-label')
+    clickimage.click()
+    return this
+}
+   PhotoComment(data){
+   const photocom= cy.get('#phototext')
+   photocom.type(data)
+   return this
+}
+   Clickupload(){
+    const clicku=cy.get('#image-upload-button')
+    clicku.click()
+    cy.get('#imageUploadBtn').click()
+    cy.get('#noOfLikesLinknew').click()
+    return this
+}
+   ImageComment(datat){
+       const icomment=cy.get('#formCreateComment_listId2 > .commentBox')
+       icomment.type(datat)
+       cy.get('#formCreateComment_listId2 > .commentSubmitBtn').click()
+   }
+   ClickShareVideo(){
+    const share=cy.get('#video-tab-label')
+    share.click()
+    return this
+ } 
+   UploadURL(){
+     const uploadurl=cy.get('#createVideo_content')
+     cy.type(uploadurl)
+     cy.get('#btnSaveVideo_https\:\/\/www\.youtube\.com\/embed\/3tpVVY5OP3g\?rel\=0').click()
+     return this
+ }
+ clickUpcomimgAnniversaries(){
+    cy.get('#rightBarHeadingAnniv').click()
+
+ }
+ clickmostlikedposts(){
+    cy.get('#rightBarHeadingMl').click()
+ }
+ clickMostCommentedPosts(){
+    cy.get('#rightBarHeadingMc').click()
+ }
+   
+}
+
+
+maintenance: Syed
+
+Assign Leave: Uddip
+
+My info: Siddharth
+
+Vacancy:Suraksha
+
+Recruitment_Candidates : Ashwin----

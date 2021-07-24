@@ -1,0 +1,22 @@
+//Below code to execute scripts 3 times in case of failure.
+
+  "retries":{
+    "runMode":1,
+    "openMode":2
+
+  },
+
+  //Index.js file.
+
+  const cucumber = require('cypress-cucumber-preprocessor').default
+module.exports = (on, config) => {
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
+  on('file:preprocessor', cucumber())
+    // modify config values
+    //integrationFolder:""
+    //config.pageLoadTimeout = 50000
+    config.env.url_Beta = 'https://opensource-demo.orangehrmlive.com/'
+    return config
+}
+

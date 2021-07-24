@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-09T07:04:13.074Z",
+    "end": "2020-10-09T07:04:23.617Z",
+    "duration": 10543,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1d776520-6536-4e91-bc53-183e810dcbf3",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Cypress_API_Demo\\Mocking_Using_Cypress.js",
+      "file": "cypress\\integration\\examples\\Cypress_API_Demo\\Mocking_Using_Cypress.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "41c813d5-3e6f-4e8f-8948-0f9fbb2bd264",
+          "title": "Mocking API/XHAR Calls using Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET and PUT Request",
+              "fullTitle": "Mocking API/XHAR Calls using Cypress GET and PUT Request",
+              "timedOut": null,
+              "duration": 6585,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/commands/network-requests');\ncy.server(); // Listen to GET to comments/1\ncy.route('GET', 'comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('status').should('eq', 200); // Listen to POST to comments\ncy.route('POST', '/comments').as('postComment'); // we have code that posts a comment when\n// the button is clicked in scripts.js\ncy.get('.network-post').click();\ncy.wait('@postComment'); // get the route\ncy.get('@postComment').should(function (xhr) {\n  expect(xhr.requestBody).to.include('email');\n  expect(xhr.requestHeaders).to.have.property('Content-Type');\n  expect(xhr.responseBody).to.have.property('name', 'Using POST in cy.route()');\n}); // Stub a response to PUT comments/ ****\ncy.route({\n  method: 'PUT',\n  url: 'comments/*',\n  status: 404,\n  response: {\n    error: 'I am learning Cypress'\n  },\n  delay: 500\n}).as('putComment'); // we have code that puts a comment when\n// the button is clicked in scripts.js\ncy.get('.network-put').click();\ncy.wait('@putComment'); // our 404 statusCode logic in scripts.js executed\ncy.get('.network-put-comment').should('contain', 'I am learning Cypress');",
+              "err": {},
+              "uuid": "2c9aff9b-ad1c-4368-8d53-90a9906addff",
+              "parentUUID": "41c813d5-3e6f-4e8f-8948-0f9fbb2bd264",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c9aff9b-ad1c-4368-8d53-90a9906addff"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6585,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

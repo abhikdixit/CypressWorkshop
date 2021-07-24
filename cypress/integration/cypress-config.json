@@ -1,0 +1,4 @@
+{
+    "pageLoadTimeout":40000,
+    "baseUrl":"http://shop.demoqa.com/my-account/"
+}

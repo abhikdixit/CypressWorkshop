@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-09T07:04:52.080Z",
+    "end": "2020-10-09T07:04:54.532Z",
+    "duration": 2452,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b07d2e44-2911-44f5-93a0-66fe8ac4aa6c",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Cypress_API_Demo\\Verify_Name_Response.js",
+      "file": "cypress\\integration\\examples\\Cypress_API_Demo\\Verify_Name_Response.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bd6d0f79-d166-4a8d-9211-a39b6c5f87a7",
+          "title": "API Testing with Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the header",
+              "fullTitle": "API Testing with Cypress Validate the header",
+              "timedOut": null,
+              "duration": 1227,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@pikachu').its('headers').its('content-type').should('include', 'application/json; charset=utf-8');",
+              "err": {},
+              "uuid": "3faf7d8c-d05c-45d8-8d30-7dcb35b2df1d",
+              "parentUUID": "bd6d0f79-d166-4a8d-9211-a39b6c5f87a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the status code",
+              "fullTitle": "API Testing with Cypress Validate the status code",
+              "timedOut": null,
+              "duration": 522,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@pikachu').its('status').should('equal', 200);",
+              "err": {},
+              "uuid": "b01c8c52-2c2d-4e7f-b679-254d60f9eeda",
+              "parentUUID": "bd6d0f79-d166-4a8d-9211-a39b6c5f87a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the pokemon's name",
+              "fullTitle": "API Testing with Cypress Validate the pokemon's name",
+              "timedOut": null,
+              "duration": 467,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@pikachu').its('body').should('include', {\n  name: 'pikachu'\n});",
+              "err": {},
+              "uuid": "6c33b141-1444-4d0c-8f94-59069b690286",
+              "parentUUID": "bd6d0f79-d166-4a8d-9211-a39b6c5f87a7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3faf7d8c-d05c-45d8-8d30-7dcb35b2df1d",
+            "b01c8c52-2c2d-4e7f-b679-254d60f9eeda",
+            "6c33b141-1444-4d0c-8f94-59069b690286"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2216,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
