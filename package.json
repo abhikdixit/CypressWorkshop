@@ -6,8 +6,10 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "RunTest": "npm run test --",
-    "Cypress_API_Demo": "npm run test -- --spec \"cypress/integration/examples/Cypress_API_Demo/**/*.js\"",
+    "Cypress_API_Demo_Chercher": "npm run test -- --spec \"cypress/integration/examples/Cypress_API_Demo/ChercherTech_API_Example/**/*.js\"",
+    "Cypress_API_Demo": "npm run test -- --spec \"cypress/integration/examples/Cypress_API_Demo/API_Example/**/*.js\"",
     "Cypress_UI_Demo": "npm run test -- --spec \"cypress/integration/examples/Cypress_UI_Demo/**/*.js\"",
+    "SanityTest": "npm run test -- --spec \"cypress/integration/examples/Sanity_Test/**/*.js\"",
     "Cypress_API_Demo_Dashboard": "npm run test -- --record --key 3662efed-bb3d-4404-95d3-216edcdeae4a --spec \"cypress/integration/examples/Cypress_API_Demo/**/*.js\"",
     "Cypress_Sanity": "npm run test -- --record --key 684b4c55-bac8-4a4a-9eba-48d6fb31302e --spec \"cypress/integration/examples/Sanity_Test/**/*.js\""
   },
